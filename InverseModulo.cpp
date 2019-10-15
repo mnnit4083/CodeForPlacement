@@ -1,8 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 int d,x,y;
+// d will hold the gcd value
 void inverseMod(int num,int mod)
 {
+	// base case when mod is zero then gcd will be num
 	if(mod==0)
 	{
 		d=num;
@@ -10,7 +12,7 @@ void inverseMod(int num,int mod)
 		y=0;
 	}
 	else
-	{
+	{	// recurvise call for finding the gcd
 		inverseMod(mod,num%mod);
 		int temp=x;
 		x=y;
