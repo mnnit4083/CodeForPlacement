@@ -17,6 +17,14 @@ void inverseMod(int num,int mod)
 		y=temp-(num/mod)*y;
 	}
 }
+//when mod is prime we ca use the fermat's little theorem
+int modInverseFermat(int num,int mod)
+{
+	 
+	return pow(num,mod-2);
+	//for complexity point of view  implement yout own power function
+}
+
 int main(int argc, char const *argv[])
 {
 	int number,mod;
@@ -25,3 +33,4 @@ int main(int argc, char const *argv[])
 	cout<<x;
 	return 0;
 }
+
